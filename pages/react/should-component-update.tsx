@@ -57,6 +57,9 @@ export default class ShouldComponentUpdate extends Component<any, State> {
           </Grid>
           <TextField
             id='outlined-basic'
+            inputProps={{
+              'data-testid': 'outlined-basic',
+            }}
             label='Value'
             autoComplete='off'
             size='small'
