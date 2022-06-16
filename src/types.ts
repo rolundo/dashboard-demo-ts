@@ -113,3 +113,24 @@ export type Geo = {
   lat: string
   lng: string
 }
+
+export type Comment = {
+  postId: number
+  id: number
+  name: string
+  email: string
+  body: string
+}
+
+export type Todo = {
+  userId: number
+  id: number
+  title: string
+  completed: boolean
+}
+
+export type Message = {
+  username: string
+  message: string
+  time: Date
+}

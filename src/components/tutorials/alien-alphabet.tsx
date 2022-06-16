@@ -23,6 +23,13 @@ export default function AlienAlphabetTutorial() {
         </Grid>
         <Grid item xs={12}>
           <Typography paragraph>
+            This function will accept an array of alien words sorted in
+            alphabetical order. It will determine the order of the alien
+            alphabet by first creating an adjacency list. This adjacency list
+            will then be topologically sorted using a depth-first search. The
+            output will be an array of letters in alphabetical order.
+          </Typography>
+          <Typography paragraph>
             First we create a hash map that will store unique letters. This map
             will be used to create an adjancency list where each letter (vertex)
             will store vertices (edges) that it points to:

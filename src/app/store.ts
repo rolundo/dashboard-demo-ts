@@ -2,10 +2,15 @@ import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 
 import languageReducer from '../features/languageSlice'
 import usersReducer from '../features/usersSlice'
+import commentsReducer from '../features/commentsSlice'
 
 export function makeStore() {
   return configureStore({
-    reducer: { language: languageReducer, users: usersReducer },
+    reducer: {
+      language: languageReducer,
+      users: usersReducer,
+      comments: commentsReducer,
+    },
   })
 }
 
