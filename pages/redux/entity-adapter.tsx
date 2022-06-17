@@ -1,5 +1,5 @@
 import { Fragment, useEffect } from 'react'
-import { useAppDispatch } from '../../src/app/hooks'
+import { useAppDispatch, useAppSelector } from '../../src/app/hooks'
 import store, { AppState } from '../../src/app/store'
 import {
   commentsAdapter,
@@ -23,6 +23,7 @@ import EntityAdapterTutorial from '../../src/components/tutorials/entity-adapter
 
 export default function EntityAdapterExample() {
   const dispatch = useAppDispatch()
+  const fetchedComments = useAppSelector((state: AppState) => state.comments)
   const commentSelector = commentsAdapter.getSelectors<AppState>(
     (state) => state.comments
   )
